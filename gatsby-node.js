@@ -49,4 +49,37 @@ module.exports = {
       // do nothing
     }
   },
+  createPages: ({ actions, graphql }) => {
+    const { createPage } = actions
+    return graphql(
+      `
+      query {
+        allNodePressRelease {
+          edges {
+            node {
+              id
+              path {
+                alias
+              }
+            }
+          }
+        }
+      }
+      `
+    ).then(result => {
+      if (result.errors) {
+        throw result.errors
+      }
+
+      result.data.allNodePressRelease.edges.forEach(({ node }) => {
+        createPage({
+          path: node.path.alias,
+          component: path.resolve(`src/templates/press-release.js`),
+          context: {
+            id: node.id,
+          },
+        })
+      })
+    })
+  }
 };
