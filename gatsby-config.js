@@ -40,5 +40,11 @@ module.exports = {
       },
     },
     `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `http://local.justice8.doj.gov`,
+      },
+    },
   ],
 };

@@ -18,6 +18,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.0.33",
+    "gatsby-source-drupal": "3.0.14",
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-yaml": "^2.1.6",
     "lodash": "^4.17.11",
