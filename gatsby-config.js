@@ -24,7 +24,7 @@ module.exports = {
           ],
         },
         {
-          items: [{ text: 'Simple link', link: '/' }],
+          items: [{ text: 'News', link: '/news' }],
         },
       ],
     },
