@@ -1,12 +1,45 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import { Banner, SkipNav } from 'uswds-react';
+import './layout.css';
+import Header from './header';
 
-import "./layout.css"
+const mainContent = 'main-content';
 
-const Layout = ({ children }) => <div>{children}</div>
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            header {
+              navigation {
+                title
+                items {
+                  text
+                  link
+                }
+              }
+              secondaryLinks {
+                text
+                link
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div>
+        <SkipNav skipsTo={mainContent} />
+        <Banner />
+        <div className="usa-overlay" />
+        <Header {...data.site.siteMetadata} />
+        <main id={mainContent}>{children}</main>
+      </div>
+    )}
+  />
+);
 
-Layout.propTypes = {
-  children: PropTypes.any,
-}
-
-export default Layout
+export default Layout;

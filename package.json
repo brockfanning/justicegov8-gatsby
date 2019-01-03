@@ -1,46 +1,32 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "federalist-gatsby-uswds-template",
+  "description": "Description A template for Federalist that uses Gatsby and USWDS 2.0",
+  "license": "CC0-1.0",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "gatsby": "^2.0.76",
-    "gatsby-image": "^2.0.20",
-    "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^2.0.16",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sass": "2.0.7",
-    "gatsby-plugin-sharp": "^2.0.14",
-    "gatsby-source-drupal": "3.0.14",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-sharp": "^2.1.8",
-    "node-sass": "4.11.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "uswds": "2.0.0-beta.4"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
-  },
-  "devDependencies": {
-    "prettier": "^1.15.2"
-  },
+  "author": "davemcorwin",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "git://github.com/18f/federalist-gatsby-uswds-template.git"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "federalist": "npm run build -- --prefix-paths"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gatsby": "^2.0.33",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-yaml": "^2.1.6",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "uswds": "^2.0.0-beta.4"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.3"
   }
 }
